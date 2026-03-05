@@ -135,6 +135,10 @@ PrefabInstance:
       propertyPath: Chest_Output_TMP
       value: 
       objectReference: {fileID: 5530180474409564464}
+    - target: {fileID: 267849077577728284, guid: 6b903c24810820b488ecc0cd40890532, type: 3}
+      propertyPath: LootTableFilePath
+      value: Assets/Resources/LootTables/serumloot.csv
+      objectReference: {fileID: 0}
     - target: {fileID: 1429552763389677460, guid: 6b903c24810820b488ecc0cd40890532, type: 3}
       propertyPath: m_LocalPosition.x
       value: 657
@@ -177,7 +181,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8645114868770924355, guid: 6b903c24810820b488ecc0cd40890532, type: 3}
       propertyPath: m_Name
-      value: Working (1)
+      value: Buff Chest
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -608,6 +612,10 @@ PrefabInstance:
       propertyPath: Chest_Output_TMP
       value: 
       objectReference: {fileID: 5530180474409564464}
+    - target: {fileID: 267849077577728284, guid: 6b903c24810820b488ecc0cd40890532, type: 3}
+      propertyPath: LootTableFilePath
+      value: Assets/Resources/LootTables/meleeloot.csv
+      objectReference: {fileID: 0}
     - target: {fileID: 1429552763389677460, guid: 6b903c24810820b488ecc0cd40890532, type: 3}
       propertyPath: m_LocalPosition.x
       value: 640
@@ -650,7 +658,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8645114868770924355, guid: 6b903c24810820b488ecc0cd40890532, type: 3}
       propertyPath: m_Name
-      value: Working
+      value: Melee Chest
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -762,6 +770,10 @@ PrefabInstance:
       propertyPath: Chest_Output_TMP
       value: 
       objectReference: {fileID: 5530180474409564464}
+    - target: {fileID: 267849077577728284, guid: 6b903c24810820b488ecc0cd40890532, type: 3}
+      propertyPath: LootTableFilePath
+      value: Assets/Resources/LootTables/longrangeloot.csv
+      objectReference: {fileID: 0}
     - target: {fileID: 1429552763389677460, guid: 6b903c24810820b488ecc0cd40890532, type: 3}
       propertyPath: m_LocalPosition.x
       value: 255
@@ -804,7 +816,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8645114868770924355, guid: 6b903c24810820b488ecc0cd40890532, type: 3}
       propertyPath: m_Name
-      value: Chest
+      value: Long Range Chest
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
