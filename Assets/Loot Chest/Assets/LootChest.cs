@@ -190,8 +190,9 @@ public class LootChest : MonoBehaviour
         {
             output += "1 x ("  + drop.rarity + ") " +  drop.name + "\n" ;
         }   
-        Chest_Output_TMP.text = output; 
+        Chest_Output_TMP.text = output;
     }
+
     // This function allows for custom rarities that correspond to the loot table .csv file's rarities, as well as the corresponding weights of each rarity. 
     public Dictionary<string, int> insertCustomRarities(string[] rarities, int[]weights)
     {
