@@ -70,10 +70,20 @@ public class LootChest : MonoBehaviour
             Debug.Log("New chest created");
             LootChestGeneration(this);
             displayOutput(this);
-
             alreadyGenerated = true;
+            InventoryUI ui = FindFirstObjectByType<InventoryUI>();
+            Debug.Log("UI found? " + ui);
+            foreach (var item in drops)
+            {
+                Debug.Log("Item type is: " + item.type);
+                if (item.type == "Melee")
+                    ui.SetMeleeItem(item);
+                else if (item.type == "LongRange")
+                    ui.SetLongRangeItem(item);
+                else if (item.type == "Serum")
+                    ui.SetSerumItem(item);
+            }
 
-            displayOutput(this);
         }
         else
         {
