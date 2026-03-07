@@ -2873,6 +2873,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1207035559915828199}
   - component: {fileID: 650068329736858419}
+  - component: {fileID: -5601174424883843050}
   m_Layer: 0
   m_Name: Map2
   m_TagString: Untagged
@@ -2979,6 +2980,44 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 0
   m_SpriteSortPoint: 0
+--- !u!114 &-5601174424883843050
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8391653309026227284}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fc90df2f3637d5f448cf770073716f31, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::MapColorizer
+  wallRenderers:
+  - {fileID: 8427376133244510760}
+  - {fileID: 157857864691841805}
+  - {fileID: 4603301861935244625}
+  - {fileID: 4647065652379313930}
+  - {fileID: 3422534345170254415}
+  - {fileID: 6961391544231289051}
+  - {fileID: 1837584027506341822}
+  - {fileID: 2187338749664248131}
+  - {fileID: 2290285150286419121}
+  - {fileID: 5307957430057493205}
+  - {fileID: 7080596345901455904}
+  - {fileID: 390714902274605021}
+  - {fileID: 4252796373231690573}
+  - {fileID: 339329471227349622}
+  - {fileID: 7875934404573896569}
+  - {fileID: 4434015050398467506}
+  - {fileID: 3739762542913204368}
+  - {fileID: 8360063299581653282}
+  - {fileID: 2075210052981873324}
+  - {fileID: 2451259864082897095}
+  - {fileID: 2935648669238963235}
+  wallColors:
+  - {r: 0.45098042, g: 0.18431373, b: 0, a: 0}
+  - {r: 1, g: 0.9935779, b: 0.3820755, a: 0}
+  - {r: 0.3160377, g: 1, b: 0.42898557, a: 0}
 --- !u!1 &9194568223928984428
 GameObject:
   m_ObjectHideFlags: 0
