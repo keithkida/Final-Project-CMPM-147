@@ -1,0 +1,18 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e98f47db6ee5c174590685c5d2d1afd0, type: 3}
+  m_Name: Storm Rifle
+  m_EditorClassIdentifier: Assembly-CSharp::RangedWeapon
+  weaponName: Storm Rifle
+  damage: 10
+  Cooldown: 0.08
+  projectilePrefab: {fileID: 5068143056504192535, guid: 7dacf7baade7db54c82cfc31bb624b1a, type: 3}

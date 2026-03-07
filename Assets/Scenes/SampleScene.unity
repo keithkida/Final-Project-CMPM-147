@@ -696,35 +696,11 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents:
-    - {fileID: 5307359361933205517, guid: c480b2d875fdc2e468978ff0fb8ab28a, type: 3}
+    - {fileID: 0}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 1922684157328417012, guid: c480b2d875fdc2e468978ff0fb8ab28a, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1936671316089128408}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c480b2d875fdc2e468978ff0fb8ab28a, type: 3}
---- !u!1 &1936671316089128400 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1922684157328417012, guid: c480b2d875fdc2e468978ff0fb8ab28a, type: 3}
-  m_PrefabInstance: {fileID: 1936671316089128399}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &1936671316089128408
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1936671316089128400}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5a088e263cc60c74c8cb560dc41393df, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::PlayerDIrection
-  UpSprite: {fileID: 21300000, guid: 22e2e266842ee4be99cc17a825471e49, type: 3}
-  DownSprite: {fileID: 21300000, guid: 78d03ce1d36c540d5a183e4b042d3afb, type: 3}
-  LeftSprite: {fileID: 21300000, guid: 27f23eab49f3b418e91095d09e5f8a25, type: 3}
-  RightSprite: {fileID: 21300000, guid: 3aef8abc03ec1473f880af90e3a363b1, type: 3}
 --- !u!1001 &5633131540213761227
 PrefabInstance:
   m_ObjectHideFlags: 0

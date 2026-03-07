@@ -15,7 +15,9 @@ GameObject:
   - component: {fileID: 7540840539868207488}
   - component: {fileID: 242776992735628893}
   - component: {fileID: 7184729435766223733}
-  - component: {fileID: 5307359361933205517}
+  - component: {fileID: 722048998783578089}
+  - component: {fileID: 834743157347231483}
+  - component: {fileID: -532284728171416817}
   m_Layer: 0
   m_Name: hero1
   m_TagString: Untagged
@@ -233,7 +235,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9d9c00c4c20f50d4eb8d9321edb22b91, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ChestOpener
---- !u!114 &5307359361933205517
+--- !u!114 &722048998783578089
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -242,9 +244,44 @@ MonoBehaviour:
   m_GameObject: {fileID: 1922684157328417012}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9bd3c880ae5613b4eab44fd7e215ba3b, type: 3}
+  m_Script: {fileID: 11500000, guid: d8c6a62a797ca4b4baa96988f2a129e2, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::PlayerSpawnPoint
+  m_EditorClassIdentifier: Assembly-CSharp::PlayerAttackController
+  meleeWeapon: {fileID: 0}
+  rangedWeapon: {fileID: 0}
+  serumBuff: {fileID: 0}
+--- !u!114 &834743157347231483
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1922684157328417012}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5a088e263cc60c74c8cb560dc41393df, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PlayerDIrection
+  UpSprite: {fileID: 21300000, guid: 22e2e266842ee4be99cc17a825471e49, type: 3}
+  DownSprite: {fileID: 21300000, guid: 78d03ce1d36c540d5a183e4b042d3afb, type: 3}
+  LeftSprite: {fileID: 21300000, guid: 27f23eab49f3b418e91095d09e5f8a25, type: 3}
+  RightSprite: {fileID: 21300000, guid: 3aef8abc03ec1473f880af90e3a363b1, type: 3}
+--- !u!114 &-532284728171416817
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1922684157328417012}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d46f649d28df10847b7f85931cf8ee58, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PlayerStats
+  maxHealth: 100
+  moveSpeed: 5
+  damageMultiplier: 1
+  defenseMultiplier: 1
 --- !u!1 &5307042690317575723
 GameObject:
   m_ObjectHideFlags: 0
