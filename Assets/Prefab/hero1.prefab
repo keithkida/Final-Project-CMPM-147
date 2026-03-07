@@ -15,6 +15,7 @@ GameObject:
   - component: {fileID: 7540840539868207488}
   - component: {fileID: 242776992735628893}
   - component: {fileID: 7184729435766223733}
+  - component: {fileID: 5307359361933205517}
   m_Layer: 0
   m_Name: hero1
   m_TagString: Untagged
@@ -232,6 +233,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9d9c00c4c20f50d4eb8d9321edb22b91, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ChestOpener
+--- !u!114 &5307359361933205517
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1922684157328417012}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9bd3c880ae5613b4eab44fd7e215ba3b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PlayerSpawnPoint
 --- !u!1 &5307042690317575723
 GameObject:
   m_ObjectHideFlags: 0
