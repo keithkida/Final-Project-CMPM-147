@@ -33,7 +33,7 @@ public class RangedWeapon : Weapon
 
         // 2. Calculate direction
         Vector2 dir = (mousePos - user.transform.position).normalized;
-
+    
         // 3. Spawn projectile OUTSIDE the player collider
         Vector3 spawnPos = user.transform.position + (Vector3)(dir * 10f);
         GameObject proj = Instantiate(projectilePrefab, spawnPos, Quaternion.identity);
