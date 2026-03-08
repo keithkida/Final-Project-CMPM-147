@@ -73,16 +73,33 @@ public class LootChest : MonoBehaviour
             alreadyGenerated = true;
             InventoryUI ui = FindFirstObjectByType<InventoryUI>();
             Debug.Log("UI found? " + ui);
+            LootDatabase db = Resources.Load<LootDatabase>("LootDatabase");
+            Debug.Log("DB loaded? " + db);
+            PlayerAttackController pac = FindFirstObjectByType<PlayerAttackController>();
+            
+
             foreach (var item in drops)
             {
-                Debug.Log("Item type is: " + item.type);
                 if (item.type == "Melee")
+                {
+                    MeleeWeapon w = db.GetMelee(item.name);
+                    pac.meleeWeapon = w;
                     ui.SetMeleeItem(item);
+                }
                 else if (item.type == "LongRange")
+                {
+                    RangedWeapon w = db.GetRanged(item.name);
+                    pac.rangedWeapon = w;
                     ui.SetLongRangeItem(item);
+                }
                 else if (item.type == "Serum")
+                {
+                    Serum s = db.GetSerum(item.name);
+                    pac.serumBuff = s;
                     ui.SetSerumItem(item);
+                }
             }
+
 
         }
         else
