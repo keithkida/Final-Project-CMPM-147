@@ -29,4 +29,6 @@ public class PlayerDIrection : MonoBehaviour
             spriteRenderer.sprite = DownSprite;
         }
     }
+
+    
 }

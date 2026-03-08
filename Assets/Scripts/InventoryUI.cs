@@ -46,4 +46,6 @@ public class InventoryUI : MonoBehaviour
         Debug.Log("Updating serum label to: " + item.name);
         serumLabel.color = GetRarityColor(item.rarity);
     }
+
+    
 }

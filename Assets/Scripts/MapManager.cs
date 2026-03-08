@@ -3,6 +3,8 @@ using UnityEngine;
 public class MapManager : MonoBehaviour
 {
     [SerializeField] private GameObject[] maps;
+    public Transform[] bossEntrances;
+    public GameObject bossDoorPrefab;
 
 
 
@@ -16,6 +18,9 @@ public class MapManager : MonoBehaviour
 
         // Spawn chests for this map
         SpawnChests(index + 1);
+
+        bossDoorPrefab.transform.position = bossEntrances[index].position;
+
     }
 
     void SpawnChests(int mapIndex)
