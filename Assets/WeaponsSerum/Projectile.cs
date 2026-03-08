@@ -10,12 +10,13 @@ public class Projectile : MonoBehaviour
     {
         damage = dmg;
         direction = dir.normalized;
+        transform.rotation = Quaternion.LookRotation(Vector3.forward, direction);
         Destroy(gameObject, 3f);
     }
 
     void Update()
     {
-        transform.Translate(direction * speed * Time.deltaTime, Space.World);
+        transform.Translate(Vector3.right * speed * Time.deltaTime, Space.Self);
     }
 
     void OnTriggerEnter2D(Collider2D other)
