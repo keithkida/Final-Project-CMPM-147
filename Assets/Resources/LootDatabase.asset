@@ -1,0 +1,59 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b7b6ae0d3d0d95d4b9a6127e0406c240, type: 3}
+  m_Name: LootDatabase
+  m_EditorClassIdentifier: Assembly-CSharp::LootDatabase
+  meleeWeapons:
+  - {fileID: 11400000, guid: c36bbcade48c1964fa9dd5fc74769acd, type: 2}
+  - {fileID: 11400000, guid: c6abb6edba14c7d4da57a0f9fcee4e33, type: 2}
+  - {fileID: 11400000, guid: 787e3347ce551a64fa29c22884aae870, type: 2}
+  - {fileID: 11400000, guid: 3a09b9279026480498299c20ce3eea7e, type: 2}
+  - {fileID: 11400000, guid: d394e894ed6348843a8f28dee6fe097b, type: 2}
+  - {fileID: 11400000, guid: 6fd3ebeb497e75f4b943b695c430c93a, type: 2}
+  - {fileID: 11400000, guid: 0f6d8cde4e3375b49b028c2165cd616c, type: 2}
+  - {fileID: 11400000, guid: 06a1629ab13198f40959c8ddc31f958e, type: 2}
+  - {fileID: 11400000, guid: ec98923c3ec65374d80aeb2699e4506e, type: 2}
+  - {fileID: 11400000, guid: eac02f1cf559f9b4daf523eb3387cb5e, type: 2}
+  - {fileID: 11400000, guid: d27b711e0d5e5644882e9adedcc49db4, type: 2}
+  - {fileID: 11400000, guid: efdb65f5309b35f499817bb9b3b6a7c1, type: 2}
+  rangedWeapons:
+  - {fileID: 11400000, guid: 5360d362df86e2e4184c4ddcb06918bc, type: 2}
+  - {fileID: 11400000, guid: 9010006ca255d3b45ada352a105caab5, type: 2}
+  - {fileID: 11400000, guid: 8da76e173bc1b644280a7fef1b782281, type: 2}
+  - {fileID: 11400000, guid: c8f36b7b7f26ce54b8c5c2175eb8a12f, type: 2}
+  - {fileID: 11400000, guid: 38853dcdc396d674b87f5bb56a013451, type: 2}
+  - {fileID: 11400000, guid: d2793b99ae197894c8031e5486132635, type: 2}
+  - {fileID: 11400000, guid: 7f7c47fefb41e51458acae5152951e81, type: 2}
+  - {fileID: 11400000, guid: aeaf9095f93044a489290b7866f87f88, type: 2}
+  - {fileID: 11400000, guid: 76e67f3f98ca3684d99bffd50b6920af, type: 2}
+  - {fileID: 11400000, guid: 955a527c8a9b40f4c8cee78e8f618893, type: 2}
+  - {fileID: 11400000, guid: 6d8dad4465ab9a94284732ebe742aa6f, type: 2}
+  - {fileID: 11400000, guid: f7912a5b828a1ca4390cc0390aaec8f9, type: 2}
+  - {fileID: 11400000, guid: f295f40e6db6c0149909fa081a24d181, type: 2}
+  serums:
+  - {fileID: 11400000, guid: 54b29add00e77784ab2f5eb316efdb6d, type: 2}
+  - {fileID: 11400000, guid: 28e0f1b2ad9bdad40a3957aea19ec1ef, type: 2}
+  - {fileID: 11400000, guid: c935b92b00ce2584b8a05b739be95639, type: 2}
+  - {fileID: 11400000, guid: b0961e0793a40d140a3c92615cf24362, type: 2}
+  - {fileID: 11400000, guid: 02fce4a6696479542913e3306572f605, type: 2}
+  - {fileID: 11400000, guid: 0fc8de4822bcb0f4e93d86ff647bf4aa, type: 2}
+  - {fileID: 11400000, guid: 0412ae98882098c45a3457007daf7508, type: 2}
+  - {fileID: 11400000, guid: ca2fd9cb013ed794587930f8758cfea4, type: 2}
+  - {fileID: 11400000, guid: ad42a7a6f286a6443bc7c3d588891919, type: 2}
+  - {fileID: 11400000, guid: 79b06f4dfe025f74198e73d4a783a98a, type: 2}
+  - {fileID: 11400000, guid: d7ec4971f682a004fbb7b12e0bafead8, type: 2}
+  - {fileID: 11400000, guid: a14eebadc96e35348bc3d67d9ece11a7, type: 2}
+  - {fileID: 11400000, guid: 39b8b89f382fae84d9b4c99a7c641f0c, type: 2}
+  - {fileID: 11400000, guid: 5108c93c51d0e8a4c8dac3ae810f2de7, type: 2}
+  - {fileID: 11400000, guid: b33b070ee17757b46b4f4c8527347ca0, type: 2}
+  - {fileID: 11400000, guid: 111b8551931c50c408966c4d6e4a0a24, type: 2}
+  - {fileID: 11400000, guid: 76aa95d50abf5be4b91b490dd84bdb28, type: 2}
