@@ -8,6 +8,8 @@ public class RangedWeapon : Weapon
     [Header("Ammo Settings")]
     public int maxAmmo = 10;
     [HideInInspector] public int currentAmmo;
+    public float projectileOffset = 0.5f;
+
 
     private void OnEnable()
     {
@@ -33,7 +35,7 @@ public class RangedWeapon : Weapon
         Vector2 dir = (mousePos - user.transform.position).normalized;
 
         // 3. Spawn projectile OUTSIDE the player collider
-        Vector3 spawnPos = user.transform.position + (Vector3)(dir * 0.8f);
+        Vector3 spawnPos = user.transform.position + (Vector3)(dir * 10f);
         GameObject proj = Instantiate(projectilePrefab, spawnPos, Quaternion.identity);
 
         // 4. Convert damage (float) to int

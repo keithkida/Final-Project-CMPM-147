@@ -6,6 +6,20 @@ public class Projectile : MonoBehaviour
     private int damage;
     private Vector2 direction;
 
+    public enum ProjectileMode { Safe, Combat }
+    public ProjectileMode mode = ProjectileMode.Safe;
+
+    void Start()
+    {
+        // SAFE MODE: disable collider so it can't hit anything
+        if (mode == ProjectileMode.Safe)
+        {
+            Collider2D col = GetComponent<Collider2D>();
+            if (col != null)
+                col.enabled = false;
+        }
+    }
+
     public void Init(int dmg, Vector2 dir)
     {
         damage = dmg;
@@ -16,12 +30,16 @@ public class Projectile : MonoBehaviour
 
     void Update()
     {
-        transform.Translate(Vector3.right * speed * Time.deltaTime, Space.Self);
+        transform.position += (Vector3)direction * speed * Time.deltaTime;
     }
 
     void OnTriggerEnter2D(Collider2D other)
     {
-        // later: damage enemy
+        // SAFE MODE: do nothing at all
+        if (mode == ProjectileMode.Safe)
+            return;
+
+        // COMBAT MODE: later you can add damage logic here
         Destroy(gameObject);
     }
 }

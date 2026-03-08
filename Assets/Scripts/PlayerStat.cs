@@ -10,6 +10,9 @@ public class PlayerStats : MonoBehaviour
 
     private int currentHealth;
 
+    public int CurrentHealth => currentHealth;
+
+
     void Start()
     {
         currentHealth = maxHealth;

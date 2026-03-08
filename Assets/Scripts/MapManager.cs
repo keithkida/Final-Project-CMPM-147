@@ -3,9 +3,7 @@ using UnityEngine;
 public class MapManager : MonoBehaviour
 {
     [SerializeField] private GameObject[] maps;
-    [SerializeField] private GameObject meleeChestPrefab;
-    [SerializeField] private GameObject rangedChestPrefab;
-    [SerializeField] private GameObject serumChestPrefab;
+
 
 
     void Start()
