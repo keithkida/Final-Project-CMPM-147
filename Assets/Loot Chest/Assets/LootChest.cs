@@ -5,12 +5,10 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;   
 using Unity.VisualScripting;
-using UnityEditorInternal;
 using System.Xml;
 using System.Collections;
 using TMPro;
-using UnityEditorInternal.Profiling.Memory.Experimental;
-using UnityEditor;
+
 
 public class LootChest : MonoBehaviour
 {
