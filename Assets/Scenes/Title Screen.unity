@@ -232,26 +232,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 165168bf31cb9d34488a79f5ee5dfe67, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::StartScreen
---- !u!1 &1376778955 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 585178000879501544, guid: a9e22f647353f084c868fbf47914e428, type: 3}
-  m_PrefabInstance: {fileID: 6364305063420100492}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &1376778959
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1376778955}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cfabb0440166ab443bba8876756fdfa9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Shadow
-  m_EffectColor: {r: 0, g: 0, b: 0, a: 0.5}
-  m_EffectDistance: {x: 3, y: -3}
-  m_UseGraphicAlpha: 1
 --- !u!1001 &3249491832059941102
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -278,15 +258,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1025219561881771723, guid: ea362cb077a22874c9d7c5b4d34b8b0e, type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 1025219561881771723, guid: ea362cb077a22874c9d7c5b4d34b8b0e, type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 1025219561881771723, guid: ea362cb077a22874c9d7c5b4d34b8b0e, type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 1025219561881771723, guid: ea362cb077a22874c9d7c5b4d34b8b0e, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -469,10 +449,7 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 585178000879501544, guid: a9e22f647353f084c868fbf47914e428, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1376778959}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a9e22f647353f084c868fbf47914e428, type: 3}
 --- !u!1001 &7670890987549045114
 PrefabInstance:
