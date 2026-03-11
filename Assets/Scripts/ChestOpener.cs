@@ -22,7 +22,7 @@ public class ChestOpener : MonoBehaviour
 
     void Update()
     {
-        if (currentChest != null && Input.GetKeyDown(KeyCode.E))
+        if (currentChest != null && (Input.GetKeyDown(KeyCode.E) || Input.GetMouseButtonDown(0)))
         {
             Debug.Log("Player opened the chest!");
             currentChest.Open();

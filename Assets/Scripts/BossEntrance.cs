@@ -7,7 +7,7 @@ public class BossEntrance : MonoBehaviour
 
     void Update()
     {
-        if (playerInRange && Input.GetKeyDown(KeyCode.E))
+        if (playerInRange && (Input.GetKeyDown(KeyCode.E) || Input.GetMouseButtonDown(0)))
         {
             SceneManager.LoadScene("Boss Room");
         }
