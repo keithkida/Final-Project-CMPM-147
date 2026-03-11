@@ -699,6 +699,10 @@ PrefabInstance:
       propertyPath: Chest_Output_TMP
       value: 
       objectReference: {fileID: 963588142}
+    - target: {fileID: 7923871516033475074, guid: a76ad0556cff88149ad7b0b597e0e12f, type: 3}
+      propertyPath: LootTableFilePath
+      value: meleeloot.csv
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -791,6 +795,10 @@ PrefabInstance:
       propertyPath: Chest_Output_TMP
       value: 
       objectReference: {fileID: 963588142}
+    - target: {fileID: 4340739422212634482, guid: 32820e03443da4f46b9aad72d91876af, type: 3}
+      propertyPath: LootTableFilePath
+      value: serumloot.csv
+      objectReference: {fileID: 0}
     - target: {fileID: 8193111944720757037, guid: 32820e03443da4f46b9aad72d91876af, type: 3}
       propertyPath: m_LocalPosition.x
       value: 87
@@ -1776,6 +1784,10 @@ PrefabInstance:
       propertyPath: Chest_Output_TMP
       value: 
       objectReference: {fileID: 963588142}
+    - target: {fileID: 5221768152160897491, guid: 40a37b5b5bca07145947621c6c05bf5c, type: 3}
+      propertyPath: LootTableFilePath
+      value: longrangeloot.csv
+      objectReference: {fileID: 0}
     - target: {fileID: 6576991429099811646, guid: 40a37b5b5bca07145947621c6c05bf5c, type: 3}
       propertyPath: m_Name
       value: Long Range Chest

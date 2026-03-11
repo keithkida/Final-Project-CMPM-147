@@ -239,7 +239,7 @@ public class LootChest : MonoBehaviour
     // outputs a dictionary storing the string of the rarity category, and a list of objects that exist within that rarity
     public Dictionary<string, List<gameItem>> insertCustomLootTable(string filePath)
     {
-        string path = filePath;
+        string path = Path.Combine(Application.streamingAssetsPath, filePath);;
         StreamReader reader;
         Dictionary<string, List<gameItem>> customLootTable = new Dictionary<string, List<gameItem>>();
         if(File.Exists(path))
