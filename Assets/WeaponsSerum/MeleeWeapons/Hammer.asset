@@ -15,4 +15,6 @@ MonoBehaviour:
   weaponName: Hammer
   damage: 6
   Cooldown: 0.5
-  range: 1.1
+  range: 1.3
+  offset: 11
+  owner: 0

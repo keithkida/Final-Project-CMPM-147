@@ -15,4 +15,6 @@ MonoBehaviour:
   weaponName: Dragonbone Blade
   damage: 18
   Cooldown: 0.2
-  range: 1.8
+  range: 1.6
+  offset: 11
+  owner: 0

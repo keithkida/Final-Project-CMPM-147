@@ -15,4 +15,6 @@ MonoBehaviour:
   weaponName: Thermal Axe
   damage: 16
   Cooldown: 0.4
-  range: 1.5
+  range: 1.4
+  offset: 11
+  owner: 0

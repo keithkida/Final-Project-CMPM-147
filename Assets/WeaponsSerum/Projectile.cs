@@ -2,12 +2,21 @@ using UnityEngine;
 
 public class Projectile : MonoBehaviour
 {
+
     public float speed = 10f;
     private int damage;
     private Vector2 direction;
 
     public enum ProjectileMode { Safe, Combat }
     public ProjectileMode mode = ProjectileMode.Safe;
+
+    public enum ProjectileOwner
+    {
+        Player,
+        Enemy
+    }
+
+    public ProjectileOwner owner;
 
     void Start()
     {
@@ -28,6 +37,11 @@ public class Projectile : MonoBehaviour
         Destroy(gameObject, 3f);
     }
 
+    private bool checkTag(string tag)
+    {
+        return CompareTag(tag);
+    }
+
     void Update()
     {
         transform.position += (Vector3)direction * speed * Time.deltaTime;
@@ -35,11 +49,24 @@ public class Projectile : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D other)
     {
-        // SAFE MODE: do nothing at all
+        Debug.Log($"Projectile hit: {other.name}");
         if (mode == ProjectileMode.Safe)
             return;
 
-        // COMBAT MODE: later you can add damage logic here
-        Destroy(gameObject);
+        if (owner == ProjectileOwner.Player && other.CompareTag("Enemy"))
+        {
+            Debug.Log($"Projectile dealt {damage} damage to {other.name}");
+            if (other.TryGetComponent(out BossStats enemy))
+                enemy.TakeDamage(damage);
+            Destroy(gameObject);
+        }
+        else if (owner == ProjectileOwner.Enemy && other.CompareTag("Player"))
+        {
+            Debug.Log($"Projectile dealt {damage} damage to {other.name}");
+            if (other.TryGetComponent(out PlayerStats player))
+                player.TakeDamage(damage);
+            Destroy(gameObject);
+        }
     }
+
 }

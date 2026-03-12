@@ -3,8 +3,8 @@ using UnityEngine;
 public abstract class Weapon : ScriptableObject
 {
     public string weaponName;
-    public float damage;
+    public int damage;
     public float Cooldown;
 
-    public abstract void Use(GameObject user);
+    public abstract void Use(GameObject user, int finalDamage);
 }

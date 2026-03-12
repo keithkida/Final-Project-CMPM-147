@@ -17,7 +17,7 @@ public class RangedWeapon : Weapon
         currentAmmo = maxAmmo;
     }
 
-    public override void Use(GameObject user)
+    public override void Use(GameObject user, int finalDamage)
     {
         if (currentAmmo <= 0)
         {
@@ -38,15 +38,12 @@ public class RangedWeapon : Weapon
         Vector3 spawnPos = user.transform.position + (Vector3)(dir * 10f);
         GameObject proj = Instantiate(projectilePrefab, spawnPos, Quaternion.identity);
 
-        // 4. Convert damage (float) to int
-        int dmg = Mathf.RoundToInt(damage);
-
         // 5. Initialize projectile with damage + direction
         Projectile projectile = proj.GetComponent<Projectile>();
         
         if (projectile != null)
         {
-            projectile.Init(dmg, dir);
+            projectile.Init(finalDamage, dir);
             currentAmmo--;
         }
         else

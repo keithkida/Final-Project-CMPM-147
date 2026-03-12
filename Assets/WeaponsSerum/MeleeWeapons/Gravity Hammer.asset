@@ -15,4 +15,6 @@ MonoBehaviour:
   weaponName: Gravity Hammer
   damage: 20
   Cooldown: 0.8
-  range: 1.4
+  range: 1.7
+  offset: 11
+  owner: 0
