@@ -51,6 +51,7 @@ public class PlayerAttackController : MonoBehaviour
             }
             serumBuff.Use(gameObject);
             Debug.Log($"Serum: {serumBuff.name} buff applied!");
+            serumBuff = null; // Consume serum after use
         }
     }
 }

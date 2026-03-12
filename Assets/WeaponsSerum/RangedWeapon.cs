@@ -8,7 +8,7 @@ public class RangedWeapon : Weapon
     [Header("Ammo Settings")]
     public int maxAmmo = 10;
     [HideInInspector] public int currentAmmo;
-    public float projectileOffset = 0.5f;
+    // private float projectileOffset = 1f;
 
 
     private void OnEnable()
@@ -27,15 +27,26 @@ public class RangedWeapon : Weapon
 
         Debug.Log("Ranged attack!");
 
+        
+
         // 1. Get mouse world position
         Vector3 mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
         mousePos.z = 0f;
 
+        Transform firePoint = user.transform.Find("FirePoint");
+
+        Vector3 spawnPos = firePoint.position;
+
+
         // 2. Calculate direction
-        Vector2 dir = (mousePos - user.transform.position).normalized;
+        Vector2 dir = (mousePos - firePoint.position).normalized;
+
+
+
+        Debug.DrawLine(user.transform.position, mousePos, Color.red, 1f);
+        Debug.Log($"Mouse: {mousePos}, Player: {user.transform.position}, Dir: {dir}");
     
-        // 3. Spawn projectile OUTSIDE the player collider
-        Vector3 spawnPos = user.transform.position + (Vector3)(dir * 10f);
+
         GameObject proj = Instantiate(projectilePrefab, spawnPos, Quaternion.identity);
 
         // 5. Initialize projectile with damage + direction
@@ -43,6 +54,7 @@ public class RangedWeapon : Weapon
         
         if (projectile != null)
         {
+            projectile.owner = Projectile.ProjectileOwner.Player;
             projectile.Init(finalDamage, dir);
             currentAmmo--;
         }

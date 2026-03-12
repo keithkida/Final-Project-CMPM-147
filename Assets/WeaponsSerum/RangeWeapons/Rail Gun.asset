@@ -18,4 +18,3 @@ MonoBehaviour:
   projectilePrefab: {fileID: 5068143056504192535, guid: 7dacf7baade7db54c82cfc31bb624b1a, type: 3}
   maxAmmo: 4
   currentAmmo: 4
-  projectileOffset: 11

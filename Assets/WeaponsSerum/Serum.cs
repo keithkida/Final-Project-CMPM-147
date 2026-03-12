@@ -43,8 +43,7 @@ public class Serum : ScriptableObject
                 stats.AddHealth(-healAmount); // negative damage = heal
                 break;
         }
-        // Destroy serum after use
-        Destroy(this);
+
     }
 }
 
