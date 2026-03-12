@@ -1240,7 +1240,7 @@ MonoBehaviour:
   projectilePrefab: {fileID: 6793948652623394945, guid: 1e3a7f8957d00a4419202aaf18429407, type: 3}
   shootInterval: 5
   projectileDamage: 10
-  projectileoffset: 1
+  projectileoffset: 11
 --- !u!1001 &9009722757742056742
 PrefabInstance:
   m_ObjectHideFlags: 0

@@ -16,3 +16,6 @@ MonoBehaviour:
   damage: 6
   Cooldown: 0.1
   projectilePrefab: {fileID: 5068143056504192535, guid: 7dacf7baade7db54c82cfc31bb624b1a, type: 3}
+  maxAmmo: 10
+  currentAmmo: 10
+  projectileOffset: 11
