@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class BossStats : MonoBehaviour
 {
@@ -23,6 +24,7 @@ public class BossStats : MonoBehaviour
     {
         Debug.Log("Boss defeated!");
         // TODO: Load win screen or trigger cutscene
+        SceneManager.LoadScene("Win Screen");
         Destroy(gameObject);
     }
 }

@@ -3,8 +3,9 @@ using UnityEngine;
 public class MapManager : MonoBehaviour
 {
     [SerializeField] private GameObject[] maps;
-    public Transform[] bossEntrances;
-    public GameObject bossDoorPrefab;
+    [SerializeField] public Transform[] bossEntrances;
+    [SerializeField] public GameObject bossDoorPrefab;
+
 
 
 
@@ -20,6 +21,8 @@ public class MapManager : MonoBehaviour
         SpawnChests(index + 1);
 
         bossDoorPrefab.transform.position = bossEntrances[index].position;
+
+        SpawnPlayer();
 
     }
 
@@ -43,5 +46,21 @@ public class MapManager : MonoBehaviour
         }
     }
 
+    void SpawnPlayer()
+    {
+        PlayerSpawnPoint point = FindFirstObjectByType<PlayerSpawnPoint>();
 
+        if (point != null)
+        {
+            var player = FindFirstObjectByType<PlayerStats>();
+            if (player != null)
+            {
+                player.transform.position = point.transform.position;
+                return;
+            }
+        }
+
+        Debug.LogWarning("No PlayerSpawnPoint found!");
+
+    }
 }

@@ -12,6 +12,13 @@ public class PlayerAttackController : MonoBehaviour
     public Weapon rangedWeapon;
     public Serum serumBuff;
 
+    public void ResetInventory()
+    {
+        meleeWeapon = null;
+        rangedWeapon = null;
+        serumBuff = null;
+    }
+
     void Update()
     {
         if(Input.GetMouseButtonDown(0)){

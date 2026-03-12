@@ -3,9 +3,35 @@ using TMPro;
 
 public class InventoryUI : MonoBehaviour
 {
+    public static InventoryUI Instance;
+
     [SerializeField] private TMP_Text meleeLabel;
     [SerializeField] private TMP_Text longRangeLabel;
     [SerializeField] private TMP_Text serumLabel;
+
+    void Awake()
+    {
+        if (Instance == null)
+        {
+            Instance = this;
+            DontDestroyOnLoad(gameObject);
+        }
+        else
+        {
+            Destroy(gameObject);
+            return;
+        }
+    }
+
+    public void ResetUI()
+    {
+        meleeLabel.text = "Melee";
+        meleeLabel.color = Color.white;
+        longRangeLabel.text = "Ranged";
+        longRangeLabel.color = Color.white;
+        serumLabel.text = "Serum";
+        serumLabel.color = Color.white;
+    }
 
     private Color GetRarityColor(string rarity)
     {

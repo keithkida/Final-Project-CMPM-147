@@ -1,10 +1,10 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class StartScreen : MonoBehaviour
+public class InstructionsScreen : MonoBehaviour
 {
     public void StartGame()
     {
-        SceneManager.LoadScene("Instructions");
+        SceneManager.LoadScene("Gameplay");
     }
 }

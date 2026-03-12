@@ -17,6 +17,11 @@ public class PlayerStats : MonoBehaviour
         currentHealth = maxHealth;
     }
 
+    public void ResetStats()
+    {
+        currentHealth = maxHealth;
+    }
+
     public int CalculateDamage(int baseDamage)
     {
         return Mathf.RoundToInt(baseDamage * damageMultiplier);
