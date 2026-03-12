@@ -53,18 +53,26 @@ public class Projectile : MonoBehaviour
         if (mode == ProjectileMode.Safe)
             return;
 
-        if (owner == ProjectileOwner.Player && other.CompareTag("Enemy"))
+        if (owner == ProjectileOwner.Player && (other.CompareTag("Enemy") || other.CompareTag("Wall")))
         {
             Debug.Log($"Projectile dealt {damage} damage to {other.name}");
             if (other.TryGetComponent(out BossStats enemy))
                 enemy.TakeDamage(damage);
+            if (other.TryGetComponent(out WallDurability wall))
+            {
+                wall.TakeDamage(1);
+            }
             Destroy(gameObject);
         }
-        else if (owner == ProjectileOwner.Enemy && other.CompareTag("Player"))
+        else if (owner == ProjectileOwner.Enemy && (other.CompareTag("Player") || other.CompareTag("Wall")))
         {
             Debug.Log($"Projectile dealt {damage} damage to {other.name}");
             if (other.TryGetComponent(out PlayerStats player))
                 player.TakeDamage(damage);
+            if (other.TryGetComponent(out WallDurability wall))
+            {
+                wall.TakeDamage(1);
+            }
             Destroy(gameObject);
         }
     }

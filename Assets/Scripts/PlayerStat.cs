@@ -5,26 +5,23 @@ public class PlayerStats : MonoBehaviour
     [Header("Base Stats")]
     public int maxHealth = 100;
     public float moveSpeed = 5f;
-    public float damageMultiplier = 1f;
-    public float defenseMultiplier = 1f;
+    public float damageMultiplier = 1f; 
+    public float defenseMultiplier = 1f; 
 
     private int currentHealth;
 
     public int CurrentHealth => currentHealth;
-
 
     void Start()
     {
         currentHealth = maxHealth;
     }
 
-    // Called by melee or ranged weapons
     public int CalculateDamage(int baseDamage)
     {
         return Mathf.RoundToInt(baseDamage * damageMultiplier);
     }
 
-    // Called when player takes damage
     public void TakeDamage(int amount)
     {
         int finalDamage = Mathf.RoundToInt(amount / defenseMultiplier);
@@ -37,43 +34,28 @@ public class PlayerStats : MonoBehaviour
     void Die()
     {
         Debug.Log("Player died!");
-        // TODO: respawn or game over
+        Destroy(gameObject);
     }
 
-    // Called by serums
-    public void ApplyDamageBuff(float multiplier, float duration)
+    // Orb upgrades
+    public void AddHealth(int amount)
     {
-        StartCoroutine(DamageBuffRoutine(multiplier, duration));
+        maxHealth += amount;
+        currentHealth += amount;
     }
 
-    public void ApplySpeedBuff(float multiplier, float duration)
+    public void AddDamageMultiplier(float amount)
     {
-        StartCoroutine(SpeedBuffRoutine(multiplier, duration));
+        damageMultiplier += amount;
     }
 
-    public void ApplyDefenseBuff(float multiplier, float duration)
+    public void AddDefenseMultiplier(float amount)
     {
-        StartCoroutine(DefenseBuffRoutine(multiplier, duration));
+        defenseMultiplier += amount;
     }
 
-    private System.Collections.IEnumerator DamageBuffRoutine(float mult, float duration)
+    public void AddSpeed(float amount)
     {
-        damageMultiplier *= mult;
-        yield return new WaitForSeconds(duration);
-        damageMultiplier /= mult;
-    }
-
-    private System.Collections.IEnumerator SpeedBuffRoutine(float mult, float duration)
-    {
-        moveSpeed *= mult;
-        yield return new WaitForSeconds(duration);
-        moveSpeed /= mult;
-    }
-
-    private System.Collections.IEnumerator DefenseBuffRoutine(float mult, float duration)
-    {
-        defenseMultiplier *= mult;
-        yield return new WaitForSeconds(duration);
-        defenseMultiplier /= mult;
+        moveSpeed += amount;
     }
 }

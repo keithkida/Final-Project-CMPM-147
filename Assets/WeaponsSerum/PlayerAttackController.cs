@@ -37,7 +37,13 @@ public class PlayerAttackController : MonoBehaviour
         }
 
         if(Input.GetKeyDown(KeyCode.Z)){
-            serumBuff?.Use(gameObject);
+            if (serumBuff == null)
+            {
+                Debug.Log("No serum buff acquired!");
+                return;
+            }
+            serumBuff.Use(gameObject);
+            Debug.Log($"Serum: {serumBuff.name} buff applied!");
         }
     }
 }

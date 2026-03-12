@@ -28,21 +28,23 @@ public class Serum : ScriptableObject
         switch (serumType)
         {
             case SerumType.Damage:
-                stats.ApplyDamageBuff(strength, duration);
+                stats.AddDamageMultiplier(strength);
                 break;
 
             case SerumType.Speed:
-                stats.ApplySpeedBuff(strength, duration);
+                stats.AddSpeed(strength);
                 break;
 
             case SerumType.Defense:
-                stats.ApplyDefenseBuff(strength, duration);
+                stats.AddDefenseMultiplier(strength);
                 break;
 
             case SerumType.Heal:
-                stats.TakeDamage(-healAmount); // negative damage = heal
+                stats.AddHealth(-healAmount); // negative damage = heal
                 break;
         }
+        // Destroy serum after use
+        Destroy(this);
     }
 }
 
