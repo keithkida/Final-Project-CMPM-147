@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PlayerStats : MonoBehaviour
 {
@@ -39,6 +40,7 @@ public class PlayerStats : MonoBehaviour
     void Die()
     {
         Debug.Log("Player died!");
+        SceneManager.LoadScene("Lose Screen");
         Destroy(gameObject);
     }
 

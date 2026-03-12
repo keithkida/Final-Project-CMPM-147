@@ -4,8 +4,11 @@ using UnityEngine.SceneManagement;
 public class BossStats : MonoBehaviour
 {
     [Header("Boss Stats")]
-    public int maxHealth = 100;
-    private int currentHealth;
+    [SerializeField] private int currentHealth;
+    [SerializeField] private int maxHealth = 100;
+
+    public int CurrentHealth => currentHealth;
+    public int MaxHealth => maxHealth;
 
     void Start()
     {

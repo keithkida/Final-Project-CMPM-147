@@ -119,6 +119,68 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1001 &55356725
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 6650092985176558236, guid: a1a2ab4be6c85e0449376d26a8ab2ee8, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 99
+      objectReference: {fileID: 0}
+    - target: {fileID: 6650092985176558236, guid: a1a2ab4be6c85e0449376d26a8ab2ee8, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 270
+      objectReference: {fileID: 0}
+    - target: {fileID: 6650092985176558236, guid: a1a2ab4be6c85e0449376d26a8ab2ee8, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6650092985176558236, guid: a1a2ab4be6c85e0449376d26a8ab2ee8, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6650092985176558236, guid: a1a2ab4be6c85e0449376d26a8ab2ee8, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6650092985176558236, guid: a1a2ab4be6c85e0449376d26a8ab2ee8, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6650092985176558236, guid: a1a2ab4be6c85e0449376d26a8ab2ee8, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6650092985176558236, guid: a1a2ab4be6c85e0449376d26a8ab2ee8, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6650092985176558236, guid: a1a2ab4be6c85e0449376d26a8ab2ee8, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6650092985176558236, guid: a1a2ab4be6c85e0449376d26a8ab2ee8, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8424213886821723994, guid: a1a2ab4be6c85e0449376d26a8ab2ee8, type: 3}
+      propertyPath: m_Name
+      value: BossEntranceSpawn (2)
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: a1a2ab4be6c85e0449376d26a8ab2ee8, type: 3}
+--- !u!4 &55356726 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 6650092985176558236, guid: a1a2ab4be6c85e0449376d26a8ab2ee8, type: 3}
+  m_PrefabInstance: {fileID: 55356725}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &175290853 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 6807679698907483094, guid: 832cfa304fc557247a2b715ac93d87f7, type: 3}
@@ -493,6 +555,68 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::ChestSpawnPoint
   mapIndex: 2
   chestType: Ranged
+--- !u!1001 &1141041204
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 6650092985176558236, guid: a1a2ab4be6c85e0449376d26a8ab2ee8, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 330
+      objectReference: {fileID: 0}
+    - target: {fileID: 6650092985176558236, guid: a1a2ab4be6c85e0449376d26a8ab2ee8, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 292
+      objectReference: {fileID: 0}
+    - target: {fileID: 6650092985176558236, guid: a1a2ab4be6c85e0449376d26a8ab2ee8, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6650092985176558236, guid: a1a2ab4be6c85e0449376d26a8ab2ee8, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6650092985176558236, guid: a1a2ab4be6c85e0449376d26a8ab2ee8, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6650092985176558236, guid: a1a2ab4be6c85e0449376d26a8ab2ee8, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6650092985176558236, guid: a1a2ab4be6c85e0449376d26a8ab2ee8, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6650092985176558236, guid: a1a2ab4be6c85e0449376d26a8ab2ee8, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6650092985176558236, guid: a1a2ab4be6c85e0449376d26a8ab2ee8, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6650092985176558236, guid: a1a2ab4be6c85e0449376d26a8ab2ee8, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8424213886821723994, guid: a1a2ab4be6c85e0449376d26a8ab2ee8, type: 3}
+      propertyPath: m_Name
+      value: BossEntranceSpawn (1)
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: a1a2ab4be6c85e0449376d26a8ab2ee8, type: 3}
+--- !u!4 &1141041205 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 6650092985176558236, guid: a1a2ab4be6c85e0449376d26a8ab2ee8, type: 3}
+  m_PrefabInstance: {fileID: 1141041204}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1351164093
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1678,11 +1802,11 @@ PrefabInstance:
     - target: {fileID: 4387937394703351715, guid: c8e016416158b7642b3e59452898048d, type: 3}
       propertyPath: 'bossEntrances.Array.data[1]'
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1141041205}
     - target: {fileID: 4387937394703351715, guid: c8e016416158b7642b3e59452898048d, type: 3}
       propertyPath: 'bossEntrances.Array.data[2]'
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 55356726}
     - target: {fileID: 4492259391573800640, guid: c8e016416158b7642b3e59452898048d, type: 3}
       propertyPath: m_LocalPosition.x
       value: 442.17773
@@ -1960,6 +2084,8 @@ SceneRoots:
   - {fileID: 3550298467817955630}
   - {fileID: 683179634121940193}
   - {fileID: 4228241345905061995}
+  - {fileID: 1141041204}
+  - {fileID: 55356725}
   - {fileID: 290206494411322879}
   - {fileID: 1588241794}
   - {fileID: 391715433}
