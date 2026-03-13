@@ -22,7 +22,7 @@ public class MapManager : MonoBehaviour
 
         bossDoorPrefab.transform.position = bossEntrances[index].position;
 
-        SpawnPlayer();
+        SpawnPlayer(index + 1);
 
     }
 
@@ -46,21 +46,24 @@ public class MapManager : MonoBehaviour
         }
     }
 
-    void SpawnPlayer()
+    void SpawnPlayer(int mapIndex)
     {
-        PlayerSpawnPoint point = FindFirstObjectByType<PlayerSpawnPoint>();
+        PlayerSpawnPoint[] points = FindObjectsByType<PlayerSpawnPoint>(FindObjectsSortMode.None);
 
-        if (point != null)
+        foreach (var point in points)
         {
-            var player = FindFirstObjectByType<PlayerStats>();
-            if (player != null)
+            if (point.mapIndex == mapIndex)
             {
-                player.transform.position = point.transform.position;
-                return;
+                var player = FindFirstObjectByType<PlayerStats>();
+                if (player != null)
+                {
+                    player.transform.position = point.transform.position;
+                    return;
+                }
             }
         }
 
-        Debug.LogWarning("No PlayerSpawnPoint found!");
-
+        Debug.LogWarning("No matching PlayerSpawnPoint found!");
     }
+
 }

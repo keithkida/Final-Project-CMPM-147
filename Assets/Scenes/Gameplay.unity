@@ -217,6 +217,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9bd3c880ae5613b4eab44fd7e215ba3b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlayerSpawnPoint
+  mapIndex: 2
 --- !u!1 &246948147 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 7665386687022704990, guid: 832cfa304fc557247a2b715ac93d87f7, type: 3}
@@ -253,6 +254,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9bd3c880ae5613b4eab44fd7e215ba3b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlayerSpawnPoint
+  mapIndex: 1
 --- !u!1 &341425809 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 464073355111451674, guid: 832cfa304fc557247a2b715ac93d87f7, type: 3}
@@ -707,6 +709,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9bd3c880ae5613b4eab44fd7e215ba3b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlayerSpawnPoint
+  mapIndex: 3
 --- !u!4 &1517361805 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 6650092985176558236, guid: a1a2ab4be6c85e0449376d26a8ab2ee8, type: 3}
@@ -1213,7 +1216,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3223763110427086720, guid: c480b2d875fdc2e468978ff0fb8ab28a, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.7
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 9020576167099348076, guid: c480b2d875fdc2e468978ff0fb8ab28a, type: 3}
       propertyPath: m_LocalPosition.x
