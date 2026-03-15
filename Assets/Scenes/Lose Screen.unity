@@ -492,13 +492,45 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 562404271224120553, guid: cde9bffa9f42fdd41956269bded70793, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 822222928}
   m_SourcePrefab: {fileID: 100100000, guid: cde9bffa9f42fdd41956269bded70793, type: 3}
 --- !u!224 &822222925 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 8628238126782572005, guid: cde9bffa9f42fdd41956269bded70793, type: 3}
   m_PrefabInstance: {fileID: 822222924}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &822222926 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 562404271224120553, guid: cde9bffa9f42fdd41956269bded70793, type: 3}
+  m_PrefabInstance: {fileID: 822222924}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &822222927 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6001214412606510226, guid: cde9bffa9f42fdd41956269bded70793, type: 3}
+  m_PrefabInstance: {fileID: 822222924}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 822222926}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Unity.TextMeshPro::TMPro.TextMeshProUGUI
+--- !u!114 &822222928
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 822222926}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 24fb952bba4b7e340a2d3d15aa4ab845, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::EndScreenUI
+  bossDefeatText: {fileID: 822222927}
 --- !u!224 &1233609510 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 966257771638490827, guid: bb1b9bb9c56656247993bddc531a3679, type: 3}
