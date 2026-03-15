@@ -14,7 +14,7 @@ public class MapManager : MonoBehaviour
         int index = Random.Range(0, maps.Length);
 
         // Spawn the map
-        Instantiate(maps[index], new Vector3(390.7f, 166.4f, 0f), Quaternion.identity);
+        Instantiate(maps[index], new Vector3(441.9496f, 199.3458f, 0f), Quaternion.identity);
         Debug.Log("Loaded map: " + maps[index].name);
 
         // Spawn chests for this map

@@ -27,7 +27,8 @@ public class BossStats : MonoBehaviour
     {
         Debug.Log("Boss defeated!");
         // TODO: Load win screen or trigger cutscene
-        SceneManager.LoadScene("Win Screen");
+        SceneManager.LoadScene("GamePlay");
         Destroy(gameObject);
+        BossDefeatTracker.timesDefeated++;
     }
 }

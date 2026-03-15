@@ -21,6 +21,8 @@ public class PlayerStats : MonoBehaviour
     public void ResetStats()
     {
         currentHealth = maxHealth;
+        PlayerHealthBar.Instance.UpdateHealth(currentHealth, maxHealth);
+
     }
 
     public int CalculateDamage(int baseDamage)
@@ -32,6 +34,8 @@ public class PlayerStats : MonoBehaviour
     {
         int finalDamage = Mathf.RoundToInt(amount / defenseMultiplier);
         currentHealth -= finalDamage;
+        PlayerHealthBar.Instance.UpdateHealth(currentHealth, maxHealth);
+
 
         if (currentHealth <= 0)
             Die();
@@ -49,6 +53,8 @@ public class PlayerStats : MonoBehaviour
     {
         maxHealth += amount;
         currentHealth += amount;
+        PlayerHealthBar.Instance.UpdateHealth(currentHealth, maxHealth);
+
     }
 
     public void AddDamageMultiplier(float amount)

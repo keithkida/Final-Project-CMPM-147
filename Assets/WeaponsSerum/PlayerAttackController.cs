@@ -32,7 +32,7 @@ public class PlayerAttackController : MonoBehaviour
             Debug.Log($"Weapon:{meleeWeapon.name} Melee attack damage: {finalDamage}");
         }
 
-        if(Input.GetMouseButtonDown(1)){
+        if(Input.GetMouseButtonDown(1) || Input.GetKeyDown(KeyCode.Space)){
             if (rangedWeapon == null)
             {
                 Debug.Log("No ranged weapon aquired!");

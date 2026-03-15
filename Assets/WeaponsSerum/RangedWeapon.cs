@@ -34,13 +34,11 @@ public class RangedWeapon : Weapon
         mousePos.z = 0f;
 
         Transform firePoint = user.transform.Find("FirePoint");
-
         Vector3 spawnPos = firePoint.position;
 
 
         // 2. Calculate direction
-        Vector2 dir = (mousePos - firePoint.position).normalized;
-
+        Vector2 dir = (mousePos - user.transform.position).normalized;
 
 
         Debug.DrawLine(user.transform.position, mousePos, Color.red, 1f);
@@ -57,6 +55,12 @@ public class RangedWeapon : Weapon
             projectile.owner = Projectile.ProjectileOwner.Player;
             projectile.Init(finalDamage, dir);
             currentAmmo--;
+            AmmoUI ammoUI = Object.FindFirstObjectByType<AmmoUI>();
+            if (ammoUI != null)
+            {
+                Debug.Log($"[RangedWeapon] Updating ammo to {currentAmmo}/{maxAmmo}");
+                AmmoUI.Instance.UpdateAmmo(currentAmmo, maxAmmo);
+            }
         }
         else
         {

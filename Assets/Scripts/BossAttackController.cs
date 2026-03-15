@@ -65,7 +65,7 @@ public class BossAttackController : MonoBehaviour
         Vector2 direction = (player.position - transform.position).normalized;
 
         // Distance between bullets in the chain
-        float spacing = 1.2f;
+        float spacing = 12f;
 
         for (int i = 0; i < 5; i++)
         {
