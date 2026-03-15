@@ -35,6 +35,8 @@ public class PlayerStats : MonoBehaviour
         int finalDamage = Mathf.RoundToInt(amount / defenseMultiplier);
         currentHealth -= finalDamage;
         PlayerHealthBar.Instance.UpdateHealth(currentHealth, maxHealth);
+        Debug.Log($"[PlayerStats] Player took {amount} raw damage (final: {finalDamage})");
+
 
 
         if (currentHealth <= 0)

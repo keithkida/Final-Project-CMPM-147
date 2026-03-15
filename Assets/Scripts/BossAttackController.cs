@@ -2,6 +2,8 @@ using UnityEngine;
 
 public class BossAttackController : MonoBehaviour
 {
+    private BossStats bossStats;
+
     public GameObject projectilePrefab;
     public float shootInterval = 5f;
     public int projectileDamage = 10;
@@ -12,6 +14,8 @@ public class BossAttackController : MonoBehaviour
 
     void Start()
     {
+        bossStats = GetComponent<BossStats>();
+
         player = GameObject.FindGameObjectWithTag("Player").transform;
     }
 
@@ -46,15 +50,14 @@ public class BossAttackController : MonoBehaviour
     {
         Vector2 direction = (player.position - transform.position).normalized;
         Vector3 spawnPos = transform.position + (Vector3)(direction * projectileoffset);
-        GameObject proj = Instantiate(projectilePrefab, spawnPos, Quaternion.identity);
 
+        GameObject proj = Instantiate(projectilePrefab, spawnPos, Quaternion.identity);
         Projectile projectile = proj.GetComponent<Projectile>();
         if (projectile != null)
         {
-            projectile.Init(projectileDamage, direction);
             projectile.owner = Projectile.ProjectileOwner.Enemy;
             projectile.mode = Projectile.ProjectileMode.Combat;
-            projectile.Init(projectileDamage, direction);
+            projectile.Init(bossStats.damage, direction);
         }
 
         Debug.Log("Boss shoots a projectile!");
@@ -104,9 +107,9 @@ public class BossAttackController : MonoBehaviour
 
         if (projectile != null)
         {
-            projectile.Init(projectileDamage, direction);
             projectile.owner = Projectile.ProjectileOwner.Enemy;
             projectile.mode = Projectile.ProjectileMode.Combat;
+            projectile.Init(bossStats.damage, direction);
         }
     }
 
