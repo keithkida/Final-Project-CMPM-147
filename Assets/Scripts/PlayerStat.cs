@@ -50,7 +50,7 @@ public class PlayerStats : MonoBehaviour
         Destroy(gameObject);
     }
 
-    // Orb upgrades
+
     public void AddHealth(int amount)
     {
         maxHealth += amount;
@@ -73,4 +73,29 @@ public class PlayerStats : MonoBehaviour
     {
         moveSpeed += amount;
     }
+    
+    public void ApplyOrb(Orb orb)
+    {
+        switch (orb.type)
+        {
+            case Orb.OrbType.Health:
+                AddHealth(orb.intAmount);
+                break;
+
+            case Orb.OrbType.Damage:
+                AddDamageMultiplier(orb.floatAmount);
+                break;
+
+            case Orb.OrbType.Speed:
+                AddSpeed(orb.floatAmount);
+                break;
+
+            case Orb.OrbType.Defense:
+                AddDefenseMultiplier(orb.floatAmount);
+                break;
+        }
+
+        Debug.Log($"[Orb] Applied {orb.orbName}");
+    }
+
 }

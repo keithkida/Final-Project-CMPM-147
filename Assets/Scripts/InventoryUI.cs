@@ -7,7 +7,6 @@ public class InventoryUI : MonoBehaviour
 
     [SerializeField] private TMP_Text meleeLabel;
     [SerializeField] private TMP_Text longRangeLabel;
-    [SerializeField] private TMP_Text serumLabel;
 
     void Awake()
     {
@@ -29,8 +28,6 @@ public class InventoryUI : MonoBehaviour
         meleeLabel.color = Color.white;
         longRangeLabel.text = "Ranged";
         longRangeLabel.color = Color.white;
-        serumLabel.text = "Serum";
-        serumLabel.color = Color.white;
     }
 
     private Color GetRarityColor(string rarity)
@@ -66,12 +63,7 @@ public class InventoryUI : MonoBehaviour
         longRangeLabel.color = GetRarityColor(item.rarity);
     }
 
-    public void SetSerumItem(LootChest.gameItem item)
-    {
-        serumLabel.text = item.name;
-        Debug.Log("Updating serum label to: " + item.name);
-        serumLabel.color = GetRarityColor(item.rarity);
-    }
+
 
     
 }

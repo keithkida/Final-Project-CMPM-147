@@ -90,12 +90,7 @@ public class LootChest : MonoBehaviour
                     pac.rangedWeapon = w;
                     ui.SetLongRangeItem(item);
                 }
-                else if (item.type == "Serum")
-                {
-                    Serum s = db.GetSerum(item.name);
-                    pac.serumBuff = s;
-                    ui.SetSerumItem(item);
-                }
+
             }
 
 
