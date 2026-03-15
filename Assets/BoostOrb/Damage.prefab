@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 1009477721319089599}
   - component: {fileID: -1060201755105563715}
   - component: {fileID: -1415684720793521602}
+  - component: {fileID: -5256062454311093093}
   m_Layer: 0
   m_Name: Damage
   m_TagString: Untagged
@@ -29,8 +30,8 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
+  m_LocalScale: {x: 120, y: 120, z: 120}
+  m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -79,8 +80,8 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_GlobalIlluminationMeshLod: 0
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: -430031303
+  m_SortingLayer: 3
   m_SortingOrder: 0
   m_MaskInteraction: 0
   m_Sprite: {fileID: 21300000, guid: d30789bef8a0147a3b079c22d7954344, type: 3}
@@ -146,3 +147,15 @@ MonoBehaviour:
   floatAmount: 0.2
   orbName: Strength Orb
   description: +20% Damage
+--- !u!114 &-5256062454311093093
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 543054129972470904}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 32b197a31e6bcb84ebd235bd95b6c70c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::OrbPickUp

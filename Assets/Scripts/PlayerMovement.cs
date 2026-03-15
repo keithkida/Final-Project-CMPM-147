@@ -2,14 +2,16 @@ using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
 {
-    public float moveSpeed = 5f;
     private Rigidbody2D rb;
     private Vector2 movement;
     public Vector2 FacingDirection { get; private set; } = Vector2.down;
+    private PlayerStats stats;
+
 
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
+        stats = GetComponent<PlayerStats>();
     }
 
     void Update()
@@ -30,6 +32,6 @@ public class PlayerMovement : MonoBehaviour
 
     void FixedUpdate()
     {
-        rb.MovePosition(rb.position + movement * moveSpeed * Time.fixedDeltaTime);
+        rb.MovePosition(rb.position + movement * stats.moveSpeed * Time.fixedDeltaTime);
     }
 }

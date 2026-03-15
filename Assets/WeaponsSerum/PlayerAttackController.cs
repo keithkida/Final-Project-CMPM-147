@@ -2,11 +2,9 @@ using UnityEngine;
 
 public class PlayerAttackController : MonoBehaviour
 {
+    private PlayerStats stats;
     public int basemeleeDamage = 10;
     public int baseRangedDamage = 5;
-
-    public float meleeMultiplier = 1f;
-    public float rangedMultiplier = 1f;
 
     public Weapon meleeWeapon;
     public Weapon rangedWeapon;
@@ -19,6 +17,11 @@ public class PlayerAttackController : MonoBehaviour
         serumBuff = null;
     }
 
+    void Start()
+    {
+        stats = GetComponent<PlayerStats>();
+    }
+
     void Update()
     {
         if(Input.GetMouseButtonDown(0)){
@@ -27,7 +30,7 @@ public class PlayerAttackController : MonoBehaviour
                 Debug.Log("No melee weapon aquired!");
                 return;
             }
-            int finalDamage = (int)((meleeWeapon.damage + basemeleeDamage) * meleeMultiplier);
+            int finalDamage = Mathf.RoundToInt((meleeWeapon.damage + basemeleeDamage) * stats.damageMultiplier);
             meleeWeapon?.Use(gameObject, finalDamage);
             Debug.Log($"Weapon:{meleeWeapon.name} Melee attack damage: {finalDamage}");
         }
@@ -38,20 +41,10 @@ public class PlayerAttackController : MonoBehaviour
                 Debug.Log("No ranged weapon aquired!");
                 return;
             }
-            int finalDamage = (int)((rangedWeapon.damage + baseRangedDamage) * rangedMultiplier);
+            int finalDamage = (int)((rangedWeapon.damage + baseRangedDamage) * stats.damageMultiplier);;
             rangedWeapon?.Use(gameObject, finalDamage);
             Debug.Log($"Weapon:{rangedWeapon.name} Ranged attack damage: {finalDamage}");
         }
 
-        if(Input.GetKeyDown(KeyCode.Z)){
-            if (serumBuff == null)
-            {
-                Debug.Log("No serum buff acquired!");
-                return;
-            }
-            serumBuff.Use(gameObject);
-            Debug.Log($"Serum: {serumBuff.name} buff applied!");
-            serumBuff = null; // Consume serum after use
-        }
     }
 }

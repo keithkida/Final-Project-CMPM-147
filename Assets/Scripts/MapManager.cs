@@ -5,6 +5,8 @@ public class MapManager : MonoBehaviour
     [SerializeField] private GameObject[] maps;
     [SerializeField] public Transform[] bossEntrances;
     [SerializeField] public GameObject bossDoorPrefab;
+    [SerializeField] private GameObject[] orbPrefabs;
+
 
 
 
@@ -23,6 +25,8 @@ public class MapManager : MonoBehaviour
         bossDoorPrefab.transform.position = bossEntrances[index].position;
 
         SpawnPlayer(index + 1);
+
+        SpawnOrbs(index + 1);
 
     }
 
@@ -64,6 +68,20 @@ public class MapManager : MonoBehaviour
         }
 
         Debug.LogWarning("No matching PlayerSpawnPoint found!");
+    }
+
+    void SpawnOrbs(int mapIndex)
+    {
+        OrbSpawnPoint[] points = FindObjectsByType<OrbSpawnPoint>(FindObjectsSortMode.None);
+
+        foreach (var point in points)
+        {
+            if (point.mapIndex == mapIndex)
+            {
+                int index = Random.Range(0, orbPrefabs.Length);
+                Instantiate(orbPrefabs[index], point.transform.position, Quaternion.identity);
+            }
+        }
     }
 
 }
