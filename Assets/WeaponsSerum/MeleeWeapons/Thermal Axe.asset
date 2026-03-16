@@ -16,6 +16,6 @@ MonoBehaviour:
   damage: 16
   Cooldown: 0.4
   rarity: Epic
-  range: 10
+  range: 17
   offset: 11
   owner: 0

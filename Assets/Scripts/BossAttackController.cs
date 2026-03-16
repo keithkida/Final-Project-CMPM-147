@@ -5,7 +5,7 @@ public class BossAttackController : MonoBehaviour
     private BossStats bossStats;
 
     public GameObject projectilePrefab;
-    public float shootInterval = 5f;
+    private float shootInterval;
     public int projectileDamage = 10;
     public float projectileoffset= 1f;
 
@@ -15,8 +15,8 @@ public class BossAttackController : MonoBehaviour
     void Start()
     {
         bossStats = GetComponent<BossStats>();
-
         player = GameObject.FindGameObjectWithTag("Player").transform;
+        shootInterval = bossStats.shootInterval;
     }
 
     void Update()
