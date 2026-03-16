@@ -11,9 +11,9 @@ public class BossEntrance : MonoBehaviour
     {
         if (playerInRange && (Input.GetKeyDown(KeyCode.E) || Input.GetMouseButtonDown(0)))
         {
-            SceneManager.LoadScene("Boss Room");
             ELabelPanel.SetActive(false);
             ELabelText.SetActive(false);
+            SceneManager.LoadScene("Boss Room");
         }
     }
 

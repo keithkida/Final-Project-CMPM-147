@@ -16,6 +16,6 @@ MonoBehaviour:
   damage: 10
   Cooldown: 0.4
   rarity: Rare
-  range: 1.4
+  range: 6
   offset: 11
   owner: 0

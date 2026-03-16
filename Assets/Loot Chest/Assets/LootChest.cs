@@ -61,20 +61,34 @@ public class LootChest : MonoBehaviour
     // call this function to open chest 
     public void Open()
     {
-        // generates a new chest with loot if 1: chest has not been opened 2: chest allows for regeneration of loot upon open
-        // else display existing chest's already generated loot 
-        if(!alreadyGenerated || allowChestRegeneration)
+        bool containsWeapon = false;
+
+        if (!alreadyGenerated || allowChestRegeneration)
         {
-            Debug.Log("New chest created");
             LootChestGeneration(this);
-            displayOutput(this);
-            alreadyGenerated = true;
+
+            Debug.Log("New chest created");
+
             InventoryUI ui = FindFirstObjectByType<InventoryUI>();
             Debug.Log("UI found? " + ui);
+
             LootDatabase db = Resources.Load<LootDatabase>("LootDatabase");
             Debug.Log("DB loaded? " + db);
+
+            // Check if this chest contains any weapon
+            foreach (var item in drops)
+            {
+                if (item.type == "Melee" || item.type == "LongRange")
+                    containsWeapon = true;
+            }
+
+            // Only show chest output UI if NOT a weapon chest
+            if (!containsWeapon)
+                displayOutput(this);
+
+            alreadyGenerated = true;
+
             PlayerAttackController pac = FindFirstObjectByType<PlayerAttackController>();
-            
 
             foreach (var item in drops)
             {
@@ -88,20 +102,17 @@ public class LootChest : MonoBehaviour
                     RangedWeapon w = db.GetRanged(item.name);
                     pac.TryPickupWeapon(w);
                 }
-
             }
-
-
         }
         else
         {
-            Debug.Log("Chest already Exists");
             displayOutput(this);
         }
-        Destroy(gameObject); 
 
-        Debug.Log("Chest opened!");
+        Destroy(gameObject);
     }
+
+
 
     public void GiveLootToPlayer(Inventory playerInventory)
     {

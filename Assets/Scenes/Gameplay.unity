@@ -1367,13 +1367,25 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2978251731859666744, guid: 3a7ab71149cda4a4295425b5463140f5, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 1690.3127
+      objectReference: {fileID: 0}
+    - target: {fileID: 2978251731859666744, guid: 3a7ab71149cda4a4295425b5463140f5, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0.9467
+      objectReference: {fileID: 0}
     - target: {fileID: 5759422374149966654, guid: 3a7ab71149cda4a4295425b5463140f5, type: 3}
       propertyPath: m_fontSize
-      value: 12
+      value: 36
+      objectReference: {fileID: 0}
+    - target: {fileID: 5759422374149966654, guid: 3a7ab71149cda4a4295425b5463140f5, type: 3}
+      propertyPath: m_fontStyle
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5759422374149966654, guid: 3a7ab71149cda4a4295425b5463140f5, type: 3}
       propertyPath: m_fontSizeBase
-      value: 12
+      value: 36
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
