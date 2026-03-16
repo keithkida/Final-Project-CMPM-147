@@ -12,8 +12,11 @@ public class BossStats : MonoBehaviour
     public float damageMultiplierPerDefeat = 1.5f;
     public float defenseMultiplier = 1f;
     public float defenseMultiplierPerDefeat = 0.1f;
-    public float shootInterval = 5f;
-    public float shootIntervalMultiplierPerDefeat = 0.9f;
+    public float baseShootInterval = 5f;            
+    public float shootIntervalMultiplierPerDefeat = 0.9f; 
+    public float minShootInterval = 1f;            
+    public float scaledShootInterval;             
+
 
     [Header("Boss Damage")]
     public int damage = 10;
@@ -25,13 +28,12 @@ public class BossStats : MonoBehaviour
     {
         int defeats = BossDefeatTracker.timesDefeated;
 
-
         float healthMultiplier = 1f + (defeats * healthMultiplierPerDefeat);
         float damageMultiplier = 1f + (defeats * damageMultiplierPerDefeat);
         float intervalMultiplier = Mathf.Pow(shootIntervalMultiplierPerDefeat, defeats);
-        shootInterval = Mathf.Max(minShootInterval, shootInterval * intervalMultiplier);
-    
-        Debug.Log($"[BossStats] Boss shoot interval scaled to {shootInterval} after {defeats} defeats");
+        scaledShootInterval  = Mathf.Max(minShootInterval, baseShootInterval * intervalMultiplier);
+
+        Debug.Log($"[BossStats] Boss shoot interval scaled to {scaledShootInterval } after {defeats} defeats");
 
         maxHealth = Mathf.RoundToInt(maxHealth * healthMultiplier);
         currentHealth = maxHealth;

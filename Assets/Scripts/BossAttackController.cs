@@ -16,7 +16,7 @@ public class BossAttackController : MonoBehaviour
     {
         bossStats = GetComponent<BossStats>();
         player = GameObject.FindGameObjectWithTag("Player").transform;
-        shootInterval = bossStats.shootInterval;
+        shootInterval = bossStats.scaledShootInterval;
     }
 
     void Update()
