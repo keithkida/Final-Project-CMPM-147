@@ -15,6 +15,7 @@ MonoBehaviour:
   weaponName: Thermal Axe
   damage: 16
   Cooldown: 0.4
+  rarity: Epic
   range: 1.4
   offset: 11
   owner: 0

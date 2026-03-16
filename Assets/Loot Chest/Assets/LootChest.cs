@@ -81,14 +81,12 @@ public class LootChest : MonoBehaviour
                 if (item.type == "Melee")
                 {
                     MeleeWeapon w = db.GetMelee(item.name);
-                    pac.meleeWeapon = w;
-                    ui.SetMeleeItem(item);
+                    pac.TryPickupWeapon(w);
                 }
                 else if (item.type == "LongRange")
                 {
                     RangedWeapon w = db.GetRanged(item.name);
-                    pac.rangedWeapon = w;
-                    ui.SetLongRangeItem(item);
+                    pac.TryPickupWeapon(w);
                 }
 
             }

@@ -8,8 +8,10 @@ public class BossStats : MonoBehaviour
     [SerializeField] private int maxHealth = 100;
 
     [Header("Scaling Per Defeat")]
-    public float healthMultiplierPerDefeat = 0.5f;
-    public float damageMultiplierPerDefeat = 0.5f;
+    public float healthMultiplierPerDefeat = 1.5f;
+    public float damageMultiplierPerDefeat = 1.5f;
+    public float defenseMultiplier = 1f;
+    public float defenseMultiplierPerDefeat = 0.1f;
 
     [Header("Boss Damage")]
     public int damage = 10;
@@ -21,8 +23,6 @@ public class BossStats : MonoBehaviour
     {
         int defeats = BossDefeatTracker.timesDefeated;
 
-        // Cap scaling BEFORE applying multipliers
-        defeats = Mathf.Min(defeats, 20);
 
         float healthMultiplier = 1f + (defeats * healthMultiplierPerDefeat);
         float damageMultiplier = 1f + (defeats * damageMultiplierPerDefeat);
@@ -30,13 +30,20 @@ public class BossStats : MonoBehaviour
         maxHealth = Mathf.RoundToInt(maxHealth * healthMultiplier);
         currentHealth = maxHealth;
 
+        defenseMultiplier = 1f + (defeats * defenseMultiplierPerDefeat);
+        Debug.Log($"[BossStats] Boss defense multiplier = {defenseMultiplier}");
+
+
         damage = Mathf.RoundToInt(damage * damageMultiplier);
         Debug.Log($"[BossStats] Boss scaled damage = {damage} after {defeats} defeats");
     }
 
     public void TakeDamage(int amount)
     {
-        currentHealth -= amount;
+        int finalDamage = Mathf.RoundToInt(amount / defenseMultiplier);
+        currentHealth -= finalDamage;
+
+        Debug.Log($"[BossStats] Took {finalDamage} damage (raw: {amount}, defenseMult: {defenseMultiplier})");
 
         if (currentHealth <= 0)
             Die();

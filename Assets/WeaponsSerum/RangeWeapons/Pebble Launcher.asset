@@ -15,6 +15,7 @@ MonoBehaviour:
   weaponName: Pebble Launcher
   damage: 4
   Cooldown: 0.3
+  rarity: Common
   projectilePrefab: {fileID: 5068143056504192535, guid: 7dacf7baade7db54c82cfc31bb624b1a, type: 3}
   maxAmmo: 20
   currentAmmo: 20

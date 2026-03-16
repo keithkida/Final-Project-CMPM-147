@@ -15,6 +15,7 @@ MonoBehaviour:
   weaponName: Shotgun
   damage: 12
   Cooldown: 0.8
+  rarity: Rare
   projectilePrefab: {fileID: 5068143056504192535, guid: 7dacf7baade7db54c82cfc31bb624b1a, type: 3}
   maxAmmo: 6
   currentAmmo: 6

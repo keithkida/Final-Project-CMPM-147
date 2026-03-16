@@ -15,6 +15,7 @@ MonoBehaviour:
   weaponName: Plasma Gun
   damage: 14
   Cooldown: 0.35
+  rarity: Epic
   projectilePrefab: {fileID: 5068143056504192535, guid: 7dacf7baade7db54c82cfc31bb624b1a, type: 3}
   maxAmmo: 4
   currentAmmo: 4

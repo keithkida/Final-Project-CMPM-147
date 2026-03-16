@@ -145,9 +145,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Orb
   type: 2
   intAmount: 0
-  floatAmount: 0.5
+  floatAmount: 1
   orbName: Speed Orb
-  description: +50% Speed
+  description: +100% Speed
 --- !u!61 &-4727522903928645548
 BoxCollider2D:
   m_ObjectHideFlags: 0

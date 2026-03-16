@@ -15,6 +15,7 @@ MonoBehaviour:
   weaponName: Crowbar
   damage: 5
   Cooldown: 0.4
+  rarity: Common
   range: 1.2
   offset: 11
   owner: 0

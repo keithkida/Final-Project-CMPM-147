@@ -15,6 +15,7 @@ MonoBehaviour:
   weaponName: Sledgehammer
   damage: 12
   Cooldown: 0.7
+  rarity: Rare
   range: 1.6
   offset: 11
   owner: 0

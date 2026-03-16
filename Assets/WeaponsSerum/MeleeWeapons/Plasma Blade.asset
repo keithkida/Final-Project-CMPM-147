@@ -15,6 +15,7 @@ MonoBehaviour:
   weaponName: Plasma Blade
   damage: 14
   Cooldown: 0.3
+  rarity: Epic
   range: 1.8
   offset: 11
   owner: 0

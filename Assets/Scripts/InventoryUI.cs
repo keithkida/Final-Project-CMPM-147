@@ -63,6 +63,18 @@ public class InventoryUI : MonoBehaviour
         longRangeLabel.color = GetRarityColor(item.rarity);
     }
 
+    public void SetMeleeItemFromWeapon(Weapon w)
+    {
+        meleeLabel.text = w.weaponName;
+        meleeLabel.color = GetRarityColor(w.rarity);
+    }
+
+    public void SetLongRangeItemFromWeapon(Weapon w)
+    {
+        longRangeLabel.text = w.weaponName;
+        longRangeLabel.color = GetRarityColor(w.rarity);
+    }
+
 
 
     

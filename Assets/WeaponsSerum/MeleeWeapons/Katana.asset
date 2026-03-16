@@ -15,6 +15,7 @@ MonoBehaviour:
   weaponName: Katana
   damage: 9
   Cooldown: 0.35
+  rarity: Rare
   range: 1.6
   offset: 11
   owner: 0

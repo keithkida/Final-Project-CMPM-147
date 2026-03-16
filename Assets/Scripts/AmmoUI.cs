@@ -9,9 +9,16 @@ public class AmmoUI : MonoBehaviour
 
     void Awake()
     {
-        Debug.Log($"[AmmoUI] Awake on object: {gameObject.name}");
+        if (Instance != null && Instance != this)
+        {
+            Destroy(gameObject);
+            return;
+        }
+
         Instance = this;
+        DontDestroyOnLoad(gameObject);
     }
+
 
     public void UpdateAmmo(int current, int max)
     {
