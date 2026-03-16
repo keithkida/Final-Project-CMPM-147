@@ -31,9 +31,9 @@ public class BossStats : MonoBehaviour
         float healthMultiplier = 1f + (defeats * healthMultiplierPerDefeat);
         float damageMultiplier = 1f + (defeats * damageMultiplierPerDefeat);
         float intervalMultiplier = Mathf.Pow(shootIntervalMultiplierPerDefeat, defeats);
-        scaledShootInterval  = Mathf.Max(minShootInterval, baseShootInterval * intervalMultiplier);
+        scaledShootInterval = Mathf.Max(minShootInterval, baseShootInterval * intervalMultiplier);
 
-        Debug.Log($"[BossStats] Boss shoot interval scaled to {scaledShootInterval } after {defeats} defeats");
+        Debug.Log($"[BossStats] Boss shoot interval scaled to {scaledShootInterval} after {defeats} defeats");
 
         maxHealth = Mathf.RoundToInt(maxHealth * healthMultiplier);
         currentHealth = maxHealth;
