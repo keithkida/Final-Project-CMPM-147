@@ -5,6 +5,7 @@ public class MeleeWeapon : Weapon
 {
     public float range = 1f;
     public float offset = 11f;
+    public AudioClip swingAudio;
     public enum MeleeOwner
     {
         Player,

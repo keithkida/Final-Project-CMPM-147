@@ -5,6 +5,6 @@ public class InstructionsScreen : MonoBehaviour
 {
     public void StartGame()
     {
-        SceneManager.LoadScene("Gameplay");
+        SceneManager.LoadScene("Orb Instructions");
     }
 }

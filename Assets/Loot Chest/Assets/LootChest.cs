@@ -83,8 +83,7 @@ public class LootChest : MonoBehaviour
             }
 
             // Only show chest output UI if NOT a weapon chest
-            if (!containsWeapon)
-                displayOutput(this);
+            displayOutput(this);
 
             alreadyGenerated = true;
 

@@ -9,10 +9,9 @@ public class BossEntrance : MonoBehaviour
 
     void Update()
     {
-        if (playerInRange && (Input.GetKeyDown(KeyCode.E) || Input.GetMouseButtonDown(0)))
+        if (playerInRange && (Input.GetKeyDown(KeyCode.E)))
         {
-            ELabelPanel.SetActive(false);
-            ELabelText.SetActive(false);
+            GetComponent<InteractPanel>()?.Hide();
             SceneManager.LoadScene("Boss Room");
         }
     }

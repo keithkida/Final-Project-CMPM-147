@@ -14,8 +14,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::RangedWeapon
   weaponName: Throwing Knives
   damage: 5
-  Cooldown: 0.4
+  Cooldown: 2
   rarity: Common
   projectilePrefab: {fileID: 5068143056504192535, guid: 7dacf7baade7db54c82cfc31bb624b1a, type: 3}
+  shootAudio: {fileID: 8300000, guid: 5da5b771ffb19cd4a97b47a29a32511d, type: 3}
   maxAmmo: 10
   currentAmmo: 10

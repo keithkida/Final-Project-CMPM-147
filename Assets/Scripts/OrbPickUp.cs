@@ -13,6 +13,8 @@ public class OrbPickUp : MonoBehaviour
     {
         if (!other.CompareTag("Player")) return;
 
+        OrbPopupUI.Instance.Show(orb);
+
         PlayerStats player = other.GetComponent<PlayerStats>();
         if (player == null) return;
 

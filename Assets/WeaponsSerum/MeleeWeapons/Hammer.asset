@@ -14,8 +14,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::MeleeWeapon
   weaponName: Hammer
   damage: 6
-  Cooldown: 0.5
+  Cooldown: 1
   rarity: Common
   range: 10
   offset: 11
+  swingAudio: {fileID: 8300000, guid: 55cde8edd01fe2f44bc57daa7f141c9c, type: 3}
   owner: 0

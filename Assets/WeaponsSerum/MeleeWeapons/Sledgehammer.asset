@@ -14,8 +14,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::MeleeWeapon
   weaponName: Sledgehammer
   damage: 12
-  Cooldown: 0.7
+  Cooldown: 3
   rarity: Rare
   range: 20
   offset: 11
+  swingAudio: {fileID: 8300000, guid: 55cde8edd01fe2f44bc57daa7f141c9c, type: 3}
   owner: 0

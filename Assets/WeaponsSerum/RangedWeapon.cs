@@ -4,6 +4,7 @@ using UnityEngine;
 public class RangedWeapon : Weapon
 {
     public GameObject projectilePrefab;
+    public AudioClip shootAudio;
 
     [Header("Ammo Settings")]
     public int maxAmmo = 10;

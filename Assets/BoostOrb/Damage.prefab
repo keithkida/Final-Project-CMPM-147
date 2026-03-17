@@ -146,7 +146,7 @@ MonoBehaviour:
   intAmount: 0
   floatAmount: 0.2
   orbName: Strength Orb
-  description: +20% Damage
+  description: Attack Boost
 --- !u!114 &-5256062454311093093
 MonoBehaviour:
   m_ObjectHideFlags: 0

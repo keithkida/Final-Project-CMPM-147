@@ -2,16 +2,18 @@ using UnityEngine;
 
 public class PickaxePickup : MonoBehaviour
 {
+    public int uses = 2;
+
     void OnTriggerEnter2D(Collider2D other)
     {
-        if (!other.CompareTag("Player")) return;
+        if (other.CompareTag("Player"))
+        {
+            PlayerStats stats = other.GetComponent<PlayerStats>();
+            stats.pickUse = uses;
 
-        PlayerStats player = other.GetComponent<PlayerStats>();
-        if (player == null) return;
+            PickaxeUI.Instance.Show(stats.pickUse); 
 
-        player.hasPickaxe = true;
-        Debug.Log("[Pickaxe] Player obtained the pickaxe!");
-
-        Destroy(gameObject);
+            Destroy(gameObject);
+        }
     }
 }

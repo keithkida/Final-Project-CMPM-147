@@ -12,6 +12,9 @@ EditorBuildSettings:
     path: Assets/Scenes/Instructions.unity
     guid: b6907bbdc79969540913f257698d4119
   - enabled: 1
+    path: Assets/Scenes/Orb Instructions.unity
+    guid: 732270e200356544bb47106e18aced0e
+  - enabled: 1
     path: Assets/Scenes/Gameplay.unity
     guid: 8c9cfa26abfee488c85f1582747f6a02
   - enabled: 1

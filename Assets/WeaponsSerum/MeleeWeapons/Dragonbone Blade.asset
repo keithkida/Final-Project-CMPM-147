@@ -14,8 +14,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::MeleeWeapon
   weaponName: Dragonbone Blade
   damage: 18
-  Cooldown: 0.2
+  Cooldown: 5
   rarity: Legendary
   range: 16
   offset: 11
+  swingAudio: {fileID: 0}
   owner: 0

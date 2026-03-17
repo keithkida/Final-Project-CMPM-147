@@ -5,15 +5,15 @@ public class PlayerStats : MonoBehaviour
 {
     [Header("Base Stats")]
     public int maxHealth = 100;
-    public float moveSpeed = 30f;
+    public float moveSpeed = 60f;
     public float damageMultiplier = 1f; 
     public float defenseMultiplier = 1f; 
+    public int pickUse = 0;
 
-    private int currentHealth;
+    public int currentHealth;
 
     public int CurrentHealth => currentHealth;
 
-    public bool hasPickaxe = false;
 
     void Start()
     {
@@ -24,6 +24,11 @@ public class PlayerStats : MonoBehaviour
     {
         currentHealth = maxHealth;
         PlayerHealthBar.Instance.UpdateHealth(currentHealth, maxHealth);
+        AmmoUI.Instance.ResetAmmo();
+        AmmoUI.Instance.Hide();
+        pickUse = 0;
+        PickaxeUI.Instance.Hide();
+        BossDefeatTracker.timesDefeated = 0;
 
     }
 
@@ -48,6 +53,8 @@ public class PlayerStats : MonoBehaviour
     void Die()
     {
         Debug.Log("Player died!");
+        AmmoUI.Instance.Hide();
+        PickaxeUI.Instance.Hide();
         SceneManager.LoadScene("Lose Screen");
         Destroy(gameObject);
     }

@@ -145,9 +145,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Orb
   type: 3
   intAmount: 0
-  floatAmount: 0.3
+  floatAmount: 0.2
   orbName: Defense Orb
-  description: +20% Defense
+  description: Defense Boost
 --- !u!61 &-5300034710783540162
 BoxCollider2D:
   m_ObjectHideFlags: 0

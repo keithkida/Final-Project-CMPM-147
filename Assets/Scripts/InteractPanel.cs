@@ -8,31 +8,30 @@ public class InteractPanel : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.CompareTag("Player"))
+        if (collision.CompareTag("Player") && CompareTag("Interactable"))
         {
-            Debug.Log("Player entered trigger!");
             isPlayerInRange = true;
         }
     }
 
     private void OnTriggerExit2D(Collider2D collision)
     {
-        if (collision.CompareTag("Player"))
+        if (collision.CompareTag("Player") && CompareTag("Interactable"))
         {
             isPlayerInRange = false;
         }
-    }    
+    }
 
     private void Update()
     {
-        if (PressEPanel != null)
-        {
-            PressEPanel.SetActive(isPlayerInRange);
-            InteractPanelUI.SetActive(isPlayerInRange);
-        }
-        else
-        {
-            Debug.LogWarning("PressEPanel is not assigned in the Inspector!");
-        }
+        PressEPanel.SetActive(isPlayerInRange);
+        InteractPanelUI.SetActive(isPlayerInRange);
+    }
+
+    public void Hide()
+    {
+        isPlayerInRange = false;
+        PressEPanel.SetActive(false);
+        InteractPanelUI.SetActive(false);
     }
 }

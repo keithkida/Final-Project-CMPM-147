@@ -6,9 +6,8 @@ public class MapManager : MonoBehaviour
     [SerializeField] public Transform[] bossEntrances;
     [SerializeField] public GameObject bossDoorPrefab;
     [SerializeField] private GameObject[] orbPrefabs;
-
-
-
+    [SerializeField] private GameObject breakableStonePrefab;
+    [SerializeField] private GameObject pickaxePrefab;
 
 
     void Start()
@@ -27,6 +26,8 @@ public class MapManager : MonoBehaviour
         SpawnPlayer(index + 1);
 
         SpawnOrbs(index + 1);
+
+        SpawnPickaxe(index + 1);
 
     }
 
@@ -70,18 +71,43 @@ public class MapManager : MonoBehaviour
         Debug.LogWarning("No matching PlayerSpawnPoint found!");
     }
 
-    void SpawnOrbs(int mapIndex)
+void SpawnOrbs(int mapIndex)
+{
+    OrbSpawnPoint[] points = FindObjectsByType<OrbSpawnPoint>(FindObjectsSortMode.None);
+
+    foreach (var point in points)
     {
-        OrbSpawnPoint[] points = FindObjectsByType<OrbSpawnPoint>(FindObjectsSortMode.None);
+        if (point.mapIndex == mapIndex)
+        {
+            int index = Random.Range(0, orbPrefabs.Length);
+
+            GameObject orb = Instantiate(orbPrefabs[index], point.transform.position, Quaternion.identity);
+            orb.SetActive(false);
+
+            GameObject stone = Instantiate(breakableStonePrefab, point.transform.position, Quaternion.identity);
+            
+            BreakableStone bs = stone.GetComponent<BreakableStone>();
+            bs.orbBehindStone = orb;
+        }
+    }
+}
+
+
+    void SpawnPickaxe(int mapIndex)
+    {
+        PickaxeSpawnPoint[] points = FindObjectsByType<PickaxeSpawnPoint>(FindObjectsSortMode.None);
 
         foreach (var point in points)
         {
             if (point.mapIndex == mapIndex)
             {
-                int index = Random.Range(0, orbPrefabs.Length);
-                Instantiate(orbPrefabs[index], point.transform.position, Quaternion.identity);
+                Instantiate(pickaxePrefab, point.transform.position, Quaternion.identity);
+                return; 
             }
         }
+
+        Debug.LogWarning("No PickaxeSpawnPoint found for map " + mapIndex);
     }
+
 
 }

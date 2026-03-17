@@ -147,7 +147,7 @@ MonoBehaviour:
   intAmount: 20
   floatAmount: 0
   orbName: Vitality Orb
-  description: +20 Max Health
+  description: Health Boost
 --- !u!61 &7409171175309894467
 BoxCollider2D:
   m_ObjectHideFlags: 0

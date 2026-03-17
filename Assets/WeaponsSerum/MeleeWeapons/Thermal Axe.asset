@@ -14,8 +14,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::MeleeWeapon
   weaponName: Thermal Axe
   damage: 16
-  Cooldown: 0.4
+  Cooldown: 4
   rarity: Epic
   range: 17
   offset: 11
+  swingAudio: {fileID: 8300000, guid: 8b6310065b71cbe488d423a85ff40d8b, type: 3}
   owner: 0
