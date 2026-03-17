@@ -77,10 +77,6 @@ public class PlayerAttackController : MonoBehaviour
             TryUsePickaxe();
         }
 
-        if (Input.GetKeyDown(KeyCode.Tab))
-        {
-            StatusWindow.Instance.Toggle();
-        }
 
         // Handle Keep / Replace choice
         if (choosingWeapon)

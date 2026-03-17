@@ -1,8 +1,8 @@
 using UnityEngine;
 
-public class CanvasPersistence : MonoBehaviour
+public class HealthBarPreserve : MonoBehaviour
 {
-    public static CanvasPersistence Instance;
+    public static HealthBarPreserve Instance;
 
     void Awake()
     {

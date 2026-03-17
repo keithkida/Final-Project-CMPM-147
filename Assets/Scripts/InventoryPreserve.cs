@@ -1,8 +1,8 @@
 using UnityEngine;
 
-public class CanvasPersistence : MonoBehaviour
+public class InventoryPreserve : MonoBehaviour
 {
-    public static CanvasPersistence Instance;
+    public static InventoryPreserve Instance;
 
     void Awake()
     {

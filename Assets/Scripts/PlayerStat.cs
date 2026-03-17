@@ -65,22 +65,30 @@ public class PlayerStats : MonoBehaviour
         maxHealth += amount;
         currentHealth += amount;
         PlayerHealthBar.Instance.UpdateHealth(currentHealth, maxHealth);
+        StatusWindow.Instance?.Refresh();
+
 
     }
 
     public void AddDamageMultiplier(float amount)
     {
         damageMultiplier += amount;
+        StatusWindow.Instance?.Refresh();
+
     }
 
     public void AddDefenseMultiplier(float amount)
     {
         defenseMultiplier += amount;
+        StatusWindow.Instance?.Refresh();
+
     }
 
     public void AddSpeed(float amount)
     {
         moveSpeed += amount;
+        StatusWindow.Instance?.Refresh();
+
     }
     
     public void ApplyOrb(Orb orb)

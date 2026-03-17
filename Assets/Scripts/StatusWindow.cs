@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using TMPro;
 
 public class StatusWindow : MonoBehaviour
@@ -17,18 +18,29 @@ public class StatusWindow : MonoBehaviour
     void Awake()
     {
         Instance = this;
+        SceneManager.sceneLoaded += OnSceneLoaded;
     }
 
-    void Start()
+    void OnDestroy()
     {
-        stats = FindFirstObjectByType<PlayerStats>();  
-        panel.SetActive(false);
+        SceneManager.sceneLoaded -= OnSceneLoaded;
     }
 
-    // Update is called once per frame
+    void OnSceneLoaded(Scene scene, LoadSceneMode mode)
+    {
+        stats = FindFirstObjectByType<PlayerStats>();
+    }
+
     void Update()
     {
-        if (!panel.activeSelf) return;
+        if (!panel.activeSelf || stats == null) return;
+
+        Refresh();
+    }
+
+    public void Refresh()
+    {
+        if (stats == null) return;
 
         HealthText.text = $"Health: {stats.currentHealth}/{stats.maxHealth}";
         DamageText.text = $"Damage Multiplier: x{stats.damageMultiplier}";
@@ -36,8 +48,4 @@ public class StatusWindow : MonoBehaviour
         SpeedText.text = $"Speed: {stats.moveSpeed}";
     }
 
-    public void Toggle()
-    {
-        panel.SetActive(!panel.activeSelf);
-    }
 }

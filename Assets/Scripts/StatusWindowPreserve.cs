@@ -1,8 +1,8 @@
 using UnityEngine;
 
-public class CanvasPersistence : MonoBehaviour
+public class StatusWindowPreserve : MonoBehaviour
 {
-    public static CanvasPersistence Instance;
+    public static StatusWindowPreserve Instance;
 
     void Awake()
     {

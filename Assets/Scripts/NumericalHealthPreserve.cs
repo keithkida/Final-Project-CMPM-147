@@ -1,8 +1,8 @@
 using UnityEngine;
 
-public class CanvasPersistence : MonoBehaviour
+public class NumericalHealthPreserve : MonoBehaviour
 {
-    public static CanvasPersistence Instance;
+    public static NumericalHealthPreserve Instance;
 
     void Awake()
     {
@@ -16,3 +16,5 @@ public class CanvasPersistence : MonoBehaviour
         DontDestroyOnLoad(gameObject);
     }
 }
+
+

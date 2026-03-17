@@ -1,8 +1,8 @@
 using UnityEngine;
 
-public class CanvasPersistence : MonoBehaviour
+public class PickaxeUIPreserve : MonoBehaviour
 {
-    public static CanvasPersistence Instance;
+    public static PickaxeUIPreserve Instance;
 
     void Awake()
     {
@@ -16,3 +16,4 @@ public class CanvasPersistence : MonoBehaviour
         DontDestroyOnLoad(gameObject);
     }
 }
+
